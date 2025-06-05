@@ -1,0 +1,401 @@
+body {
+  height: 100%;
+  font-family: "Segoe UI";
+  color: rgb(0, 0, 0);
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #1f1f1f;
+}
+body .box {
+  display: flex;
+  flex-direction: column;
+  justify-content: normal;
+  align-items: normal;
+  min-height: 100vh;
+  width: 100%;
+  max-width: 1920px;
+  background-color: white;
+}
+
+@keyframes sombraDinamica {
+  0% {
+    filter: drop-shadow(0 0 4px rgba(255, 255, 255, 0.1)) drop-shadow(0 0 8px rgba(0, 0, 0, 0.6));
+  }
+  25% {
+    filter: drop-shadow(2px 2px 6px rgba(255, 255, 255, 0.15)) drop-shadow(-2px -2px 6px rgba(0, 0, 0, 0.7));
+  }
+  50% {
+    filter: drop-shadow(0 0 12px rgba(255, 255, 255, 0.2)) drop-shadow(0 0 20px rgba(0, 0, 0, 0.8));
+  }
+  75% {
+    filter: drop-shadow(-2px 2px 6px rgba(255, 255, 255, 0.15)) drop-shadow(2px -2px 6px rgba(0, 0, 0, 0.7));
+  }
+  100% {
+    filter: drop-shadow(0 0 4px rgba(255, 255, 255, 0.1)) drop-shadow(0 0 8px rgba(0, 0, 0, 0.6));
+  }
+}
+header nav {
+  width: 100%;
+  background-color: #1f1f1f;
+  padding: 20px 40px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  position: sticky;
+}
+header nav .menu ul {
+  list-style: none;
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: normal;
+  gap: 40px;
+}
+header nav .menu ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 600;
+  letter-spacing: 1px;
+  padding: 5px;
+  border-radius: 8px;
+}
+header nav .menu ul li a:hover {
+  color: rgb(255, 242, 0);
+}
+header nav .menu ul .iconomenu a {
+  position: absolute;
+  left: 60px;
+  top: 15px;
+  gap: 0.4rem;
+  font-family: "Segoe UI";
+}
+header nav .menu ul .iconomenu a i {
+  position: absolute;
+  left: -35px;
+  top: -10px;
+  font-size: 2rem;
+}
+header nav .menu2 {
+  display: none;
+}
+header .head {
+  text-align: center;
+  padding-top: 30px;
+}
+header .head .logo img {
+  width: 400px;
+  height: auto;
+  animation: sombraDinamica 3s ease-in-out infinite;
+}
+
+footer {
+  background-color: #1f1f1f;
+  color: #bbb;
+  text-align: center;
+  padding: 20px 20px;
+  border-top: 1px solid #333;
+  box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.5);
+  margin-top: 10px;
+}
+footer p {
+  margin: 0;
+}
+
+@keyframes bounceIn {
+  0% {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+main {
+  flex: 1;
+  padding: 20px;
+}
+main .videobox {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+main .videobox video {
+  width: 640px;
+  border-radius: 12px;
+}
+main .banner {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding-top: 60px;
+  width: 1100px;
+  margin: 0 auto;
+}
+main .banner .carousel-item img {
+  animation: bounceIn 0.8s ease-out forwards;
+}
+main h1 {
+  font-size: 2rem;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  font-weight: 700;
+  text-align: center;
+}
+main .destacados {
+  padding: 40px 20px;
+  text-align: center;
+}
+main .destacados .flex-productos {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: normal;
+  flex-wrap: wrap;
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+main .destacados .flex-productos .producto {
+  max-width: 315px;
+  background: white;
+  border: 1px solid #ddd;
+  padding: 15px;
+}
+main .destacados .flex-productos .producto img {
+  width: 280px;
+  height: 210px;
+  margin-bottom: 15px;
+  border: solid 1px #ddd;
+}
+main .destacados .flex-productos .producto h3 {
+  font-size: 17px;
+  margin: 10px;
+}
+main .destacados .flex-productos .producto p {
+  color: #111;
+  font-weight: bold;
+  font-size: 15px;
+}
+main .destacados .flex-productos .producto :hover {
+  transform: scale(1.03);
+}
+main .contacto {
+  text-align: center;
+}
+main .contacto h2 {
+  font-size: 40px;
+  margin-bottom: 20px;
+  color: #111;
+}
+main .contacto .form {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: normal;
+}
+main .contacto .form .formulario {
+  background-color: rgb(247, 247, 247);
+  padding: 30px;
+  border: solid rgb(217, 217, 217) 1px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  width: 700px;
+}
+main .contacto .form .formulario form {
+  display: flex;
+  flex-direction: column;
+  justify-content: normal;
+  align-items: center;
+  gap: 20px;
+}
+main .contacto .form .formulario label {
+  text-align: left;
+  font-weight: bold;
+  margin-bottom: 5px;
+  display: block;
+  color: #333;
+}
+main .contacto .form .formulario input[type=text],
+main .contacto .form .formulario textarea {
+  width: 600px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 15px;
+  resize: none;
+}
+main .contacto .form .formulario textarea {
+  height: 120px;
+}
+main .contacto .form .formulario input[type=submit] {
+  background-color: #111;
+  color: white;
+  padding: 12px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+@media (max-width: 450px) {
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: "Segoe UI";
+    background-color: #1f1f1f;
+    display: flex;
+    flex-direction: column;
+    justify-content: normal;
+    align-items: center;
+  }
+  .box {
+    display: flex;
+    flex-direction: column;
+    justify-content: normal;
+    align-items: normal;
+    width: 100%;
+    max-width: 100%;
+    background-color: white;
+    min-height: 100vh;
+  }
+  header {
+    display: flex;
+    flex-direction: column;
+    justify-content: normal;
+    align-items: center;
+  }
+  header nav {
+    width: 100%;
+    background-color: #1f1f1f;
+    padding: 0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  }
+  header nav .menu {
+    display: none;
+  }
+  header nav .menu2 {
+    display: block;
+    position: relative;
+    margin-top: 5px;
+    margin-left: -10px;
+  }
+  header nav .menu2 .navbar-toggler {
+    display: block;
+    font-size: 1.8rem;
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    padding: 10px;
+    background: none;
+    border: none;
+  }
+  header nav .menu2 .navbar-toggler-icon {
+    filter: invert(1);
+  }
+  header nav .menu2 .collapse {
+    background-color: #1f1f1f;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    border-radius: 10px;
+  }
+  header nav .menu2 ul {
+    padding-left: 0;
+    list-style: none;
+  }
+  header nav .menu2 ul .nav-item .nav-link {
+    color: white;
+    font-weight: bold;
+  }
+  header nav .menu2 ul .nav-item .nav-link:hover {
+    color: #ccc;
+  }
+  header .head {
+    text-align: center;
+  }
+  header .head .logo img {
+    width: 300px;
+    height: auto;
+  }
+  main .banner {
+    width: 100%;
+    margin: 0 auto;
+    padding-top: 20px;
+  }
+  main .flex-productos {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: normal;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  main .flex-productos .producto {
+    width: 45%;
+  }
+  main .flex-productos .producto img {
+    width: 100% !important;
+    height: 100px !important;
+  }
+  main .formulario {
+    width: 95% !important;
+    max-width: 370px;
+    margin: 20px auto;
+    padding: 20px;
+    border: solid rgb(217, 217, 217) 1px;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  }
+  main .formulario form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: normal;
+    align-items: stretch !important;
+    gap: 20px;
+  }
+  main .formulario form label {
+    width: 100%;
+    text-align: left;
+    font-weight: bold;
+    color: #333;
+  }
+  main .formulario form input[type=text],
+  main .formulario form textarea {
+    width: 100% !important;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 15px;
+    resize: none;
+  }
+  main .formulario form textarea {
+    height: 120px;
+  }
+  main .formulario form input[type=submit] {
+    width: 100%;
+    background-color: #111;
+    color: white;
+    padding: 12px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  footer {
+    font-size: 14px;
+    padding: 15px;
+    text-align: center;
+  }
+}
+
+/*# sourceMappingURL=estilos.css.map */

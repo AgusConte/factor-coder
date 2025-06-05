@@ -1,0 +1,102 @@
+@use "./variables" as*;
+
+@keyframes sombraDinamica {
+    0% {
+        filter: drop-shadow(0 0 4px rgba(255, 255, 255, 0.1)) 
+                drop-shadow(0 0 8px rgba(0, 0, 0, 0.6));
+      }
+      25% {
+        filter: drop-shadow(2px 2px 6px rgba(255, 255, 255, 0.15)) 
+                drop-shadow(-2px -2px 6px rgba(0, 0, 0, 0.7));
+      }
+      50% {
+        filter: drop-shadow(0 0 12px rgba(255, 255, 255, 0.2)) 
+                drop-shadow(0 0 20px rgba(0, 0, 0, 0.8));
+      }
+      75% {
+        filter: drop-shadow(-2px 2px 6px rgba(255, 255, 255, 0.15)) 
+                drop-shadow(2px -2px 6px rgba(0, 0, 0, 0.7));
+      }
+      100% {
+        filter: drop-shadow(0 0 4px rgba(255, 255, 255, 0.1)) 
+                drop-shadow(0 0 8px rgba(0, 0, 0, 0.6));
+    }
+  }
+
+
+header{
+    nav {
+        width: 100%;
+        background-color: $grisfuerte;
+        padding: 20px 40px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+        position: sticky;
+        .menu {
+            ul {
+                list-style: none;
+                margin: 0;
+                @include flex(row, center, normal);
+                gap: 40px;
+                li {
+                    a {
+                        text-decoration: none;
+                        color: #fff;
+                        font-weight: 600;
+                        letter-spacing: 1px;
+                        padding: 5px;
+                        border-radius: 8px;
+                        &:hover {
+                            color: rgb(255, 242, 0);
+                          }
+                    }
+                }
+
+                .iconomenu{
+                    a {
+                        position: absolute; left: 60px; top: 15px;
+                        gap: 0.4rem;
+                        font-family: $font;
+                        i {
+                            position: absolute; left:-35px; top: -10px;
+                            font-size: 2rem;
+                        }
+                    }  
+                }
+            }
+        }
+
+        .menu2{
+            display: none;
+        }
+    }
+
+
+    .head {
+        text-align: center;
+        padding-top: 30px;
+        .logo{
+            img {
+                width: 400px;
+                height: auto;
+                animation: sombraDinamica 3s ease-in-out infinite;
+            }
+        }
+    }
+    
+}
+
+
+
+
+footer{
+    background-color: $grisfuerte;
+    color: #bbb;
+    text-align: center;
+    padding: 20px 20px;
+    border-top: 1px solid #333;
+    box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.5);
+    margin-top: 10px;
+    p {
+        margin: 0;
+    }
+}

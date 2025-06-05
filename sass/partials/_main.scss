@@ -1,0 +1,139 @@
+@use "./variables" as*;
+
+@keyframes bounceIn {
+    0% {
+      transform: scale(0.95);
+      opacity: 0;
+    }
+    50% {
+      transform: scale(1.05);
+      opacity: 1;
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  
+  
+
+main {
+    flex: 1;
+    padding: 20px;
+    .videobox{
+        @include flex(row, center, center);
+        margin-top: 20px;
+        video{
+          width:640px;
+          border-radius: 12px;
+        }
+    }
+     
+    .banner{
+        @include flex(row, center, center);
+        padding-top: 60px;
+        width: 1100px;
+        margin: 0 auto;
+
+        .carousel-item img {
+            animation: bounceIn 0.8s ease-out forwards;
+          }
+    }
+    
+    h1 {
+        font-size: 2rem;
+        margin-top: 20px;
+        margin-bottom: 30px;
+        font-weight: 700;
+        text-align: center;
+    }
+    .destacados {
+        padding: 40px 20px;
+        text-align: center;
+
+        .flex-productos {
+            @include flex(row, center, normal);
+            flex-wrap: wrap;
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+            .producto {
+                max-width: 315px;
+                background: white;
+                border: 1px solid #ddd;
+                padding: 15px;
+                img {
+                    width: 280px;
+                    height: 210px;
+                    margin-bottom: 15px;
+                    border: solid 1px #ddd;
+                }
+                h3 {
+                    font-size: 17px;
+                    margin: 10px;
+                }
+                p {
+                    color: #111;
+                    font-weight: bold;
+                    font-size: 15px;
+                }                  
+                :hover {
+                    transform: scale(1.03);
+                }
+            }
+        }
+    }
+
+    .contacto {
+        text-align: center;
+        h2 {
+            font-size: 40px;
+            margin-bottom: 20px;
+            color: #111;
+        }
+
+        .form {
+            @include flex(row, center, normal);
+            .formulario {
+                background-color: rgb(247, 247, 247);
+                padding: 30px;
+                border:solid rgb(217, 217, 217) 1px ;
+                border-radius: 12px;
+                box-shadow: 0 0 15px rgba(0,0,0,0.1);
+                width: 700px;
+                form {
+                    @include flex(column, normal, center);
+                    gap: 20px;
+                }
+                label {
+                    text-align: left;
+                    font-weight: bold;
+                    margin-bottom: 5px;
+                    display: block;
+                    color: #333;
+                }
+                input[type="text"],
+                textarea {
+                width: 600px;
+                padding: 12px;
+                border: 1px solid #ccc;
+                border-radius: 8px;
+                font-size: 15px;
+                resize: none;
+                }
+                textarea {
+                    height: 120px;
+                }
+                input[type="submit"] {
+                    background-color: #111;
+                    color: white;
+                    padding: 12px;
+                    font-size: 16px;
+                    border: none;
+                    border-radius: 8px;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
