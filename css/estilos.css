@@ -20,6 +20,28 @@ body .box {
   background-color: white;
 }
 
+@media (max-width: 450px) {
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: "Segoe UI";
+    background-color: #1f1f1f;
+    display: flex;
+    flex-direction: column;
+    justify-content: normal;
+    align-items: center;
+  }
+  .box {
+    display: flex;
+    flex-direction: column;
+    justify-content: normal;
+    align-items: normal;
+    width: 100%;
+    max-width: 100%;
+    background-color: white;
+    min-height: 100vh;
+  }
+}
 @keyframes sombraDinamica {
   0% {
     filter: drop-shadow(0 0 4px rgba(255, 255, 255, 0.1)) drop-shadow(0 0 8px rgba(0, 0, 0, 0.6));
@@ -103,6 +125,77 @@ footer p {
   margin: 0;
 }
 
+@media (max-width: 950px) and (min-width: 751px) {
+  header nav .inicio {
+    display: none !important;
+  }
+}
+@media (max-width: 750px) {
+  header {
+    display: flex;
+    flex-direction: column;
+    justify-content: normal;
+    align-items: center;
+  }
+  header nav {
+    width: 100%;
+    background-color: #1f1f1f;
+    padding: 0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  }
+  header nav .menu {
+    display: none;
+  }
+  header nav .menu2 {
+    display: block;
+    position: relative;
+    margin-top: 5px;
+    margin-left: -10px;
+  }
+  header nav .menu2 .navbar-toggler {
+    display: block;
+    font-size: 1.8rem;
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    padding: 10px;
+    background: none;
+    border: none;
+  }
+  header nav .menu2 .navbar-toggler-icon {
+    filter: invert(1);
+  }
+  header nav .menu2 .collapse {
+    background-color: #1f1f1f;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    border-radius: 10px;
+  }
+  header nav .menu2 ul {
+    padding-left: 0;
+    list-style: none;
+  }
+  header nav .menu2 ul .nav-item .nav-link {
+    color: white;
+    font-weight: bold;
+  }
+  header nav .menu2 ul .nav-item .nav-link:hover {
+    color: #ccc;
+  }
+  header .head {
+    text-align: center;
+  }
+  header .head .logo img {
+    width: 300px;
+    height: auto;
+  }
+  footer {
+    font-size: 14px;
+    padding: 15px;
+    text-align: center;
+  }
+}
 @keyframes bounceIn {
   0% {
     transform: scale(0.95);
@@ -137,7 +230,7 @@ main .banner {
   justify-content: center;
   align-items: center;
   padding-top: 60px;
-  width: 1100px;
+  width: 60%;
   margin: 0 auto;
 }
 main .banner .carousel-item img {
@@ -165,15 +258,17 @@ main .destacados .flex-productos {
   margin: 0 auto;
 }
 main .destacados .flex-productos .producto {
-  max-width: 315px;
+  max-width: 30%;
+  flex: 1 1 30%;
   background: white;
   border: 1px solid #ddd;
   padding: 15px;
 }
 main .destacados .flex-productos .producto img {
-  width: 280px;
+  width: 100%;
   height: 210px;
   margin-bottom: 15px;
+  object-fit: contain;
   border: solid 1px #ddd;
 }
 main .destacados .flex-productos .producto h3 {
@@ -246,105 +341,30 @@ main .contacto .form .formulario input[type=submit] {
   cursor: pointer;
 }
 
-@media (max-width: 450px) {
-  body {
-    margin: 0;
-    padding: 0;
-    font-family: "Segoe UI";
-    background-color: #1f1f1f;
-    display: flex;
-    flex-direction: column;
-    justify-content: normal;
-    align-items: center;
-  }
-  .box {
-    display: flex;
-    flex-direction: column;
-    justify-content: normal;
-    align-items: normal;
-    width: 100%;
-    max-width: 100%;
-    background-color: white;
-    min-height: 100vh;
-  }
-  header {
-    display: flex;
-    flex-direction: column;
-    justify-content: normal;
-    align-items: center;
-  }
-  header nav {
-    width: 100%;
-    background-color: #1f1f1f;
-    padding: 0;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
-  }
-  header nav .menu {
-    display: none;
-  }
-  header nav .menu2 {
-    display: block;
-    position: relative;
-    margin-top: 5px;
-    margin-left: -10px;
-  }
-  header nav .menu2 .navbar-toggler {
-    display: block;
-    font-size: 1.8rem;
-    position: relative;
-    top: 0;
-    left: 0;
-    z-index: 1000;
-    padding: 10px;
-    background: none;
-    border: none;
-  }
-  header nav .menu2 .navbar-toggler-icon {
-    filter: invert(1);
-  }
-  header nav .menu2 .collapse {
-    background-color: #1f1f1f;
-    padding-left: 10px;
-    padding-bottom: 10px;
-    border-radius: 10px;
-  }
-  header nav .menu2 ul {
-    padding-left: 0;
-    list-style: none;
-  }
-  header nav .menu2 ul .nav-item .nav-link {
-    color: white;
-    font-weight: bold;
-  }
-  header nav .menu2 ul .nav-item .nav-link:hover {
-    color: #ccc;
-  }
-  header .head {
-    text-align: center;
-  }
-  header .head .logo img {
-    width: 300px;
-    height: auto;
-  }
+@media (max-width: 750px) and (min-width: 351px) {
   main .banner {
-    width: 100%;
+    width: 60%;
     margin: 0 auto;
     padding-top: 20px;
   }
   main .flex-productos {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: normal;
     align-items: normal;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 10px;
   }
   main .flex-productos .producto {
-    width: 45%;
+    max-width: 45% !important;
   }
   main .flex-productos .producto img {
     width: 100% !important;
     height: 100px !important;
+  }
+  main .flex-productos .producto h3 {
+    font-size: 12px !important;
+    margin-top: 5px !important;
   }
   main .formulario {
     width: 95% !important;
@@ -391,10 +411,76 @@ main .contacto .form .formulario input[type=submit] {
     border-radius: 8px;
     cursor: pointer;
   }
-  footer {
-    font-size: 14px;
-    padding: 15px;
-    text-align: center;
+}
+@media (max-width: 350px) {
+  main .banner {
+    width: 60%;
+    margin: 0 auto;
+    padding-top: 20px;
+  }
+  main .flex-productos {
+    display: flex;
+    flex-direction: row;
+    justify-content: normal;
+    align-items: normal;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  main .flex-productos .producto {
+    min-width: 100% !important;
+  }
+  main .flex-productos .producto img {
+    width: 100% !important;
+    height: 100px !important;
+  }
+  main .flex-productos .producto h3 {
+    font-size: 12px !important;
+    margin-top: 5px !important;
+  }
+  main .formulario {
+    width: 95% !important;
+    max-width: 370px;
+    margin: 20px auto;
+    padding: 20px;
+    border: solid rgb(217, 217, 217) 1px;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  }
+  main .formulario form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: normal;
+    align-items: stretch !important;
+    gap: 20px;
+  }
+  main .formulario form label {
+    width: 100%;
+    text-align: left;
+    font-weight: bold;
+    color: #333;
+  }
+  main .formulario form input[type=text],
+  main .formulario form textarea {
+    width: 100% !important;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 15px;
+    resize: none;
+  }
+  main .formulario form textarea {
+    height: 120px;
+  }
+  main .formulario form input[type=submit] {
+    width: 100%;
+    background-color: #111;
+    color: white;
+    padding: 12px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
   }
 }
 
