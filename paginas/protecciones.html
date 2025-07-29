@@ -31,6 +31,12 @@
                             <li><a href="./bmxparts.html">BMX PARTS</a></li>
                             <li><a href="../index.html">PROTECCIONES</a></li>
                             <li><a href="./contacto.html">CONTACTO</a></li>
+                            <li class="iconocarrito">
+                                <a href="#" class="nav-link carrito-btn">
+                                    <i class="bi bi-cart-fill"></i>
+                                    <span id="carrito-cantidad" class="carrito-cantidad">0</span>
+                                  </a>                               
+                            </li>
                         </ul>
                     </div>
                     <div class="container-fluid menu2">
@@ -69,6 +75,7 @@
                         </a>
                         <h3>CASCO PROTEC LOW PRO MATTE CABALLERO </h3>
                         <p class="precio">$165.000</p>
+                        <button class="btn btn-primary agregar-carrito">Agregar al carrito</button>
                     </div>
                     <div class="producto">
                         <a href="../paginas/protecciones.html">
@@ -76,6 +83,7 @@
                         </a>
                         <h3>CASCO NO NAME</h3>
                         <p class="precio">$28.000</p>
+                        <button class="btn btn-primary agregar-carrito">Agregar al carrito</button>
                     </div>
                     <div class="producto">
                         <a href="../paginas/protecciones.html">
@@ -83,9 +91,22 @@
                         </a>
                         <h3>PROTEC STREET PADS 3PACK ADULTO </h3>
                         <p class="precio">$170.000</p>
+                        <button class="btn btn-primary agregar-carrito">Agregar al carrito</button>
                     </div>
                     </div>
                 </section>
+
+                <div id="carritoPanel" class="carrito-panel">
+                    <div class="carrito-header">
+                        <h5><i class="bi bi-cart-fill"></i> Carrito de compras</h5>
+                        <button class="cerrar-carrito" aria-label="Cerrar">&times;</button>
+                    </div>
+                    <div class="carrito-body">
+                        <ul id="lista-carrito"></ul>
+                        <p id="total-carrito"><strong>Total:</strong> $0</p>
+                        <button id="comprar-btn" class="comprar-btn">Comprar</button>
+                    </div>
+                </div>
             </main>
 
             <footer class="foot">
@@ -93,6 +114,6 @@
             </footer>
         </div>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" ></script>
-
+        <script src="../js/js2.js"></script>
     </body>
 </html>

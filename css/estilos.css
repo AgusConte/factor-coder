@@ -66,6 +66,9 @@ header nav {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
   position: sticky;
 }
+header nav .menu {
+  position: relative;
+}
 header nav .menu ul {
   list-style: none;
   margin: 0;
@@ -86,10 +89,29 @@ header nav .menu ul li a {
 header nav .menu ul li a:hover {
   color: rgb(255, 242, 0);
 }
+header nav .menu ul .iconocarrito {
+  position: absolute;
+  top: -15px;
+  right: 20px;
+  color: white;
+  font-size: 1.6rem;
+  z-index: 1055;
+}
+header nav .menu ul .iconocarrito .carrito-cantidad {
+  background-color: red;
+  color: white;
+  font-size: 0.75rem;
+  font-weight: bold;
+  padding: 2px 6px;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  right: -10px;
+}
 header nav .menu ul .iconomenu a {
   position: absolute;
-  left: 60px;
-  top: 15px;
+  left: 40px;
+  top: 0px;
   gap: 0.4rem;
   font-family: "Segoe UI";
 }
@@ -280,6 +302,18 @@ main .destacados .flex-productos .producto p {
   font-weight: bold;
   font-size: 15px;
 }
+main .destacados .flex-productos .producto .agregar-carrito {
+  background-color: #1f1f1f;
+  border: none;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  font-weight: bold;
+  font-family: inherit;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
 main .destacados .flex-productos .producto :hover {
   transform: scale(1.03);
 }
@@ -339,6 +373,75 @@ main .contacto .form .formulario input[type=submit] {
   border: none;
   border-radius: 8px;
   cursor: pointer;
+}
+main .carrito-panel {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 400px;
+  height: 100vh;
+  background-color: #1f1f1f;
+  color: white;
+  box-shadow: -4px 0 12px rgba(0, 0, 0, 0.6);
+  padding: 1rem;
+  transition: right 0.2s ease-in-out;
+  z-index: 2000;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+main .carrito-panel .carrito-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+main .carrito-panel .carrito-header .cerrar-carrito {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;
+}
+main .carrito-panel .carrito-body {
+  flex-grow: 1;
+  overflow-y: auto;
+  margin-top: 1rem;
+}
+main .carrito-panel .carrito-body #lista-carrito {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+main .carrito-panel .carrito-body #lista-carrito li {
+  border-bottom: 1px solid #444;
+  padding: 0.5rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+main .carrito-panel .carrito-body #lista-carrito .eliminar-item {
+  background: none;
+  color: crimson;
+  font-size: 1.5rem;
+  border: none;
+  cursor: pointer;
+}
+main .carrito-panel .carrito-body #total-carrito {
+  margin-top: 1rem;
+  font-size: 1.1rem;
+}
+main .carrito-panel .carrito-body .comprar-btn {
+  background-color: green;
+  color: white;
+  border: none;
+  padding: 0.5rem;
+  width: 100%;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+main .carrito-panel.abierto {
+  right: 0;
 }
 
 @media (max-width: 750px) and (min-width: 351px) {
