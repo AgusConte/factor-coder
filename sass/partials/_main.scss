@@ -153,82 +153,129 @@ main {
     }
 
     .carrito-panel {
-        position: fixed;
-        top: 0;
-        right: -100%;
-        width: 400px;
-        height: 100vh;
-        background-color: $grisfuerte;
-        color: white;
-        box-shadow: -4px 0 12px rgba(0, 0, 0, 0.6);
-        padding: 1rem;
-        transition: right 0.2s ease-in-out;
-        z-index: 2000;
+      position: fixed;
+      top: 0;
+      right: -100%;
+      width: 500px;
+      height: 100vh;
+      background-color: $grisfuerte;
+      color: white;
+      box-shadow: -4px 0 12px rgba(0, 0, 0, 0.6);
+      padding: 1rem;
+      transition: right 0.2s ease-in-out;
+      z-index: 2000;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    
+      .carrito-header {
         display: flex;
-        flex-direction: column;
         justify-content: space-between;
-      
-        .carrito-header {
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-      
-          .cerrar-carrito {
-            background: none;
-            border: none;
-            color: white;
-            font-size: 2rem;
-            cursor: pointer;
-          }
+        align-items: center;
+    
+        .cerrar-carrito {
+          background: none;
+          border: none;
+          color: white;
+          font-size: 2rem;
+          cursor: pointer;
         }
-      
-        .carrito-body {
-          flex-grow: 1;
-          overflow-y: auto;
-          margin-top: 1rem;
-      
-          #lista-carrito {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-      
-            li {
-              border-bottom: 1px solid #444;
-              padding: 0.5rem 0;
+      }
+    
+      .carrito-body {
+        flex-grow: 1;
+        overflow-y: auto;
+        margin-top: 1rem;
+    
+        #lista-carrito {
+          list-style: none;
+          padding: 0;
+          margin: 0;
+    
+          li {
+            border-bottom: 1px solid #444;
+            padding: 0.5rem 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+    
+            span {
+              flex: 1;
+            }
+    
+            .acciones {
               display: flex;
-              justify-content: space-between;
-              align-items: center;
-            }
-      
-            .eliminar-item {
-              background: none;
-              color: crimson;
-              font-size: 1.5rem;
-              border: none;
-              cursor: pointer;
+              gap: 6px;
+    
+              button {
+                border: none;
+                border-radius: 50%;
+                width: 32px;
+                height: 32px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                cursor: pointer;
+                font-size: 1.2rem; // tamaño del ícono o símbolo
+                transition: all 0.2s ease;
+            
+                &:hover {
+                  transform: scale(1.1);
+                }
+            
+                &.mas {
+                  background: #d4edda;
+                  color: #155724;
+                }
+            
+                &.menos {
+                  background: #f8d7da;
+                  color: #721c24;
+                }
+            
+                &.eliminar-item {
+                  background: #fc6776;
+                  color: #370409;
+                }
+              }
             }
           }
-      
-          #total-carrito {
-            margin-top: 1rem;
-            font-size: 1.1rem;
-          }
-      
-          .comprar-btn {
-            background-color: green;
-            color: white;
+    
+          .eliminar-item {
+            background: none;
+            color: crimson;
+            font-size: 1.5rem;
             border: none;
-            padding: 0.5rem;
-            width: 100%;
-            font-weight: bold;
             cursor: pointer;
-            margin-top: 1rem;
+          }
+        }
+    
+        #total-carrito {
+          margin-top: 1rem;
+          font-size: 1.1rem;
+        }
+    
+        .comprar-btn {
+          background-color: green;
+          color: white;
+          border: none;
+          padding: 0.5rem;
+          width: 100%;
+          font-weight: bold;
+          cursor: pointer;
+          margin-top: 1rem;
+    
+          &:hover {
+            background-color: darkgreen;
           }
         }
       }
-      .carrito-panel.abierto {
-        right: 0;
-      }
+    }
+    
+    .carrito-panel.abierto {
+      right: 0;
+    }
+    
       
      
       
